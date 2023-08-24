@@ -1,11 +1,11 @@
-name: Dynamic Analysis Security Testing
+name: DevSecOps
 on: 
   push:
     branches:
       - 'main'      
 jobs:
 #SAST
-  security:
+  SAST:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -22,7 +22,7 @@ jobs:
           path: reports
   #DAST
   Burp-Dastardly:
-    name: Burpsuite Scan
+    name:  DAST
     needs: security
     runs-on: ubuntu-latest
     steps:
