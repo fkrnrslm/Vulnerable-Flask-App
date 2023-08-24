@@ -2,7 +2,7 @@ name: Static Analysis Security Testing
 on: 
   push:
     branches:
-      - 'main'
+      - 'none'
 jobs:
   security:
     runs-on: ubuntu-latest
@@ -19,3 +19,4 @@ jobs:
         with:
           name: reports
           path: reports
+
